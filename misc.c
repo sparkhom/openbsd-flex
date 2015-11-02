@@ -158,7 +158,8 @@ void add_action (new_text)
 						    action_size);
 	}
 
-	strcpy (&action_array[action_index], new_text);
+	strlcpy ( &action_array[action_index], new_text,
+		action_size - action_index );
 
 	action_index += len;
 }

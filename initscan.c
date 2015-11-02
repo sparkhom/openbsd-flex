@@ -1944,7 +1944,7 @@ extern const char *escaped_qstart, *escaped_qend;
 #define RETURNNAME \
 	if(yyleng < MAXLINE) \
          { \
-	strcpy( nmstr, yytext ); \
+	strlcpy( nmstr, yytext, sizeof nmstr ); \
 	 } \
 	else \
 	 { \
@@ -2416,7 +2416,7 @@ YY_RULE_SETUP
 {
 			if(yyleng < MAXLINE)
         		 {
-			strcpy( nmstr, yytext );
+			strlcpy( nmstr, yytext, sizeof nmstr );
 			 }
 			else
 			 {
@@ -2649,7 +2649,7 @@ YY_RULE_SETUP
 {
  		        if(yyleng < MAXLINE)
  		         {
-			strcpy( (char *) nmdef, yytext );
+			strlcpy( (char *) nmdef, yytext, sizeof nmdef );
  		         }
  		        else
  		         {
@@ -3096,7 +3096,7 @@ YY_RULE_SETUP
 {
 			if(yyleng-1 < MAXLINE)
         		 {
-			strcpy( nmstr, yytext + 1 );
+			strlcpy( nmstr, yytext + 1, sizeof nmstr );
 			 }
 			else
 			 {
@@ -3365,7 +3365,7 @@ YY_RULE_SETUP
 
 			if(yyleng < MAXLINE)
         		 {
-			strcpy( nmstr, yytext );
+			strlcpy( nmstr, yytext, sizeof nmstr );
 			 }
 			else
 			 {
@@ -3434,7 +3434,7 @@ YY_RULE_SETUP
 
  			if(yyleng-1 < MAXLINE)
          		 {
-			strcpy( nmstr, yytext + 1 );
+			strlcpy( nmstr, yytext + 1, sizeof nmstr );
  			 }
  			else
  			 {

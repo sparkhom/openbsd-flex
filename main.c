@@ -223,12 +223,12 @@ int main (argc, argv)
 #endif
 #endif
 
-    if (pledge("stdio rpath wpath cpath proc exec", NULL) == -1)
-    {
-        fprintf( stderr, _( "%s: pledge\n"),
-                program_name);
-        exit(1);
-    }
+	if (pledge("stdio rpath wpath cpath proc exec", NULL) == -1)
+	{
+		fprintf( stderr, _( "%s: pledge\n"),
+			program_name);
+		exit(1);
+	}
 
 	return flex_main (argc, argv);
 }

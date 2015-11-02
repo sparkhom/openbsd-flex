@@ -94,14 +94,15 @@ struct Buf *buf_linedir (struct Buf *buf, const char* filename, int lineno)
 {
     const char *src;
     char *dst, *t;
+    size_t tsz;
 
-    t = flex_alloc (strlen ("#line \"\"\n")          +   /* constant parts */
+    t = flex_alloc (tsz = strlen ("#line \"\"\n")    +   /* constant parts */
                     2 * strlen (filename)            +   /* filename with possibly all backslashes escaped */
                     (int) (1 + log10 (abs (lineno))) +   /* line number */
                     1);                                  /* NUL */
     if (!t)
       flexfatal (_("Allocation of buffer for line directive failed"));
-    for (dst = t + sprintf (t, "#line %d \"", lineno), src = filename; *src; *dst++ = *src++)
+    for (dst = t + snprintf (t, tsz, "#line %d \"", lineno), src = filename; *src; *dst++ = *src++)
       if (*src == '\\')   /* escape backslashes */
         *dst++ = '\\';
     *dst++ = '"';
