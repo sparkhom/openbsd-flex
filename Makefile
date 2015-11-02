@@ -23,9 +23,6 @@ CLEANFILES+=skel.c
 INCS	=FlexLexer.h
 INCSDIR=/usr/include/g++
 LDADD+=-lm
-TOOL_SED=/usr/bin/sed
-TOOL_M4=/usr/bin/m4
-HOST_SH=/bin/sh
 
 MAN = flex.1
 
