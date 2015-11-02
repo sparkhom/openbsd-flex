@@ -15,11 +15,10 @@
 PROG=	lex
 CPPFLAGS+=-I. -I${.CURDIR} -DHAVE_CONFIG_H
 SRCS= buf.c ccl.c dfa.c ecs.c filter.c gen.c main.c misc.c \
-nfa.c options.c parse.c regex.c scan.l scanflags.c \
+nfa.c options.c parse.c regex.c scan.c scanflags.c \
 scanopt.c skel.c sym.c tables.c tables_shared.c \
 tblcmp.c yylex.c
 
-#YHEADER=1
 CLEANFILES+=skel.c
 INCS	=FlexLexer.h
 INCSDIR=/usr/include/g++
@@ -33,19 +32,5 @@ MAN = flex.1
 LINKS=	${BINDIR}/lex ${BINDIR}/flex \
 	${BINDIR}/lex ${BINDIR}/flex++
 MLINKS=	flex.1 lex.1 
-
-skel.c: flex.skl mkskel.sh flexint.h tables_shared.h
-	${TOOL_SED} -e 's/m4_/m4postproc_/g' -e 's/m4preproc_/m4_/g' \
-	    flex.skl | ${TOOL_M4} -I. -P \
-	    -DFLEX_MAJOR_VERSION=`echo ${VERSION} | cut -f 1 -d .` \
-	    -DFLEX_MINOR_VERSION=`echo ${VERSION} | cut -f 2 -d .` \
-	    -DFLEX_SUBMINOR_VERSION=`echo ${VERSION} | cut -f 3 -d .` | \
-	    ${TOOL_SED} -e 's/m4postproc_/m4_/g' | \
-	    ${HOST_SH} mkskel.sh  > ${.TARGET}
-
-scan.c: scan.l
-	${LEX} -t -p ${.ALLSRC} >${.TARGET}
-
-scan.o yylex.o: parse.h
 
 .include <bsd.prog.mk>
