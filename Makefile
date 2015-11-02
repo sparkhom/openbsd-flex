@@ -30,6 +30,8 @@ LINKS=  ${BINDIR}/lex ${BINDIR}/flex \
 		${BINDIR}/lex ${BINDIR}/flex++
 MLINKS= flex.1 lex.1
 
+VERSION="2.5.39"
+
 # Our yacc is too old to compile parse.y; use bootstrapped parse.c instead
 parse.c: parse.y
 	cp ${.CURDIR}/initparse.c parse.c;
