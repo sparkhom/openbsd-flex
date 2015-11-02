@@ -20,8 +20,6 @@ SRCS= buf.c ccl.c dfa.c ecs.c filter.c gen.c main.c misc.c \
 	  tblcmp.c yylex.c
 
 CLEANFILES+=skel.c parse.h
-INCS    =FlexLexer.h
-INCSDIR=/usr/include/g++
 LDADD+=-lm
 
 MAN = flex.1
@@ -45,5 +43,13 @@ skel.c: flex.skl mkskel.sh flexint.h tables_shared.h
 		-DFLEX_SUBMINOR_VERSION=`echo ${VERSION} | cut -f 3 -d .` | \
 		sed -e 's/m4postproc_/m4_/g' | \
 		sh ${.CURDIR}/mkskel.sh  > ${.TARGET}
+
+includes:
+.if !exists(${DESTDIR}/usr/include/g++)
+	${INSTALL} -d -o root -g bin -m 755 \
+		${DESTDIR}/usr/include/g++
+.endif
+	${INSTALL} ${INSTALL_COPY} -o ${BINOWN} -g ${BINGRP} -m 444 \
+		${.CURDIR}/FlexLexer.h ${DESTDIR}/usr/include/g++/
 
 .include <bsd.prog.mk>
