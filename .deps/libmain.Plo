@@ -1,1 +1,0 @@
-libmain.lo libmain.o: libmain.c

@@ -1,1 +1,0 @@
-lib.lo lib.o: lib.c
