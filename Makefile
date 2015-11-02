@@ -19,7 +19,6 @@ nfa.c options.c parse.c regex.c scan.c scanflags.c \
 scanopt.c skel.c sym.c tables.c tables_shared.c \
 tblcmp.c yylex.c
 
-CLEANFILES+=skel.c
 INCS	=FlexLexer.h
 INCSDIR=/usr/include/g++
 LDADD+=-lm
