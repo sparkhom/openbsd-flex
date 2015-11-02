@@ -13,7 +13,7 @@
 # To bootstrap lex, cp initscan.c to scan.c and run make.
 
 PROG=   lex
-CPPFLAGS+=-I. -I${.CURDIR} -DHAVE_CONFIG_H
+CFLAGS+=-I. -I${.CURDIR} -DHAVE_CONFIG_H
 SRCS= buf.c ccl.c dfa.c ecs.c filter.c gen.c main.c misc.c \
 	  nfa.c options.c parse.y regex.c scan.l scanflags.c \
 	  scanopt.c skel.c sym.c tables.c tables_shared.c \
