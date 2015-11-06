@@ -1,3 +1,5 @@
+/*	$OpenBSD: libmain.c,v 1.7 2012/12/05 23:20:25 deraadt Exp $	*/
+
 /* libmain - flex run-time support library "main" function */
 
 /*  This file is part of flex. */

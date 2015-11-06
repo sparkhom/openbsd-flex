@@ -1,3 +1,5 @@
+/*	$OpenBSD: nfa.c,v 1.9 2003/06/04 17:34:44 millert Exp $	*/
+
 /* nfa - NFA construction routines */
 
 /*  Copyright (c) 1990 The Regents of the University of California. */

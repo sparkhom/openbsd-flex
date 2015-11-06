@@ -1,3 +1,5 @@
+/*	$OpenBSD: misc.c,v 1.14 2015/10/15 05:57:09 mmcc Exp $	*/
+
 /* misc - miscellaneous flex routines */
 
 /*  Copyright (c) 1990 The Regents of the University of California. */

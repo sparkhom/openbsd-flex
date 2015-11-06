@@ -1,3 +1,4 @@
+/*	$OpenBSD: flexdef.h,v 1.8 2015/10/10 05:47:54 deraadt Exp $	*/
 
 /* flexdef - definitions file for flex */
 

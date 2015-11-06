@@ -1,3 +1,5 @@
+/*	$OpenBSD: sym.c,v 1.6 2003/06/04 17:34:44 millert Exp $	*/
+
 /* sym - symbol table routines */
 
 /*  Copyright (c) 1990 The Regents of the University of California. */

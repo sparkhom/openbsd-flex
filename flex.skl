@@ -1,3 +1,5 @@
+/*	$OpenBSD: flex.skl,v 1.12 2013/11/04 17:03:32 millert Exp $	*/
+
 %# -*-C-*- vi: set ft=c:
 %# This file is processed in several stages.
 %# Here are the stages, as best as I can describe:

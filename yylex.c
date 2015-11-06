@@ -1,3 +1,5 @@
+/*	$OpenBSD: yylex.c,v 1.5 2003/06/04 17:34:44 millert Exp $	*/
+
 /* yylex - scanner front-end for flex */
 
 /*  Copyright (c) 1990 The Regents of the University of California. */

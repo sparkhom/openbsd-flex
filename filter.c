@@ -1,3 +1,5 @@
+/* $OpenBSD$ */
+
 /* filter - postprocessing of flex output through filters */
 
 /*  This file is part of flex. */

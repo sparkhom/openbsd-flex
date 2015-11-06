@@ -1,3 +1,5 @@
+/* $OpenBSD$ */
+
 /* flex integer type definitions */
 
 #ifndef FLEXINT_H

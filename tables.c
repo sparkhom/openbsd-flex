@@ -1,3 +1,5 @@
+/* $OpenBSD$ */
+
 /*  tables.c - tables serialization code
  *
  *  Copyright (c) 1990 The Regents of the University of California.

@@ -1,3 +1,5 @@
+/*	$OpenBSD: gen.c,v 1.11 2004/02/03 21:20:17 espie Exp $	*/
+
 /* gen - actual generation (writing) of flex scanners */
 
 /*  Copyright (c) 1990 The Regents of the University of California. */

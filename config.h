@@ -1,3 +1,5 @@
+/*	$OpenBSD: config.h,v 1.3 1996/10/26 21:50:30 tholo Exp $	*/
+
 /* config.h.  Generated from conf.in by configure.  */
 /* conf.in.  Generated from configure.ac by autoheader.  */
 

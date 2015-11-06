@@ -1,3 +1,5 @@
+/*	$OpenBSD: scan.l,v 1.9 2006/12/06 05:03:29 ray Exp $	*/
+
 /* scan.l - scanner for flex input -*-C-*- */
 
 %{

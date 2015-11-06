@@ -1,3 +1,5 @@
+/* $OpenBSD$ */
+
 #ifdef FLEX_SCANNER
 /*
 dnl   tables_shared.c - tables serialization code

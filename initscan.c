@@ -1,3 +1,4 @@
+/*	$OpenBSD: initscan.c,v 1.14 2013/11/04 17:03:32 millert Exp $	*/
 
 #line 3 "scan.c"
 

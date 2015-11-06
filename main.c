@@ -1,3 +1,5 @@
+/*	$OpenBSD: main.c,v 1.15 2015/10/10 05:47:54 deraadt Exp $	*/
+
 /* flex - tool to generate fast lexical analyzers */
 
 /*  Copyright (c) 1990 The Regents of the University of California. */

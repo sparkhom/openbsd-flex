@@ -1,3 +1,5 @@
+/* $OpenBSD$ */
+
 /** regex - regular expression functions related to POSIX regex lib. */
 
 /*  This file is part of flex. */
