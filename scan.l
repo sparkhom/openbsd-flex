@@ -445,7 +445,8 @@ M4QEND      "]]"
 			   synerr( _("Option line too long\n"));
 			   FLEX_EXIT(EXIT_FAILURE);
 			 }
-			nmstr[strlen( nmstr ) - 1] = '\0';
+			if (nmstr[strlen( nmstr ) - 1] == '"')
+				nmstr[strlen( nmstr ) - 1] = '\0';
 			return NAME;
 			}
 
