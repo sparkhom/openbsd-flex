@@ -1857,7 +1857,6 @@ void usage ()
 		  "       --nounistd          do not include <unistd.h>\n"
 		  "       --noFUNCTION        do not generate a particular FUNCTION\n"
 		  "\n" "Miscellaneous:\n"
-		  "  -c                      do-nothing POSIX option\n"
 		  "  -n                      do-nothing POSIX option\n"
 		  "  -?\n"
 		  "  -h, --help              produce this help message\n"
