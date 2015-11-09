@@ -25,7 +25,7 @@ MAN = flex.1
 
 LINKS=  ${BINDIR}/lex ${BINDIR}/flex \
 		${BINDIR}/lex ${BINDIR}/flex++
-MLINKS= flex.1 lex.1
+MLINKS= flex.1 lex.1 flex.1 flex++.1
 
 VERSION="2.5.39"
 
